@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Courses — CodeAcademy Pro</title>
+  <meta name="description" content="Browse all programming courses: C++, Python, JavaScript, Rust, Java, SQL."/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>"/>
+</head>
+<body>
+  <header class="nav"><div class="nav-inner">
+    <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><div class="logo-text">Code<span>Academy</span> Pro</div></a>
+    <nav class="nav-links"><a href="../index.html">Home</a><a href="about.html">About Us</a><a href="courses.html" class="active">Courses</a><a href="contact.html">Contact Us</a><a href="login.html" class="nav-login">Login</a></nav>
+    <button class="hamburger" onclick="document.getElementById('mob').classList.toggle('open')" aria-label="Menu">☰</button>
+  </div></header>
+  <div class="mobile-menu" id="mob"><a href="../index.html">Home</a><a href="about.html">About Us</a><a href="courses.html">Courses</a><a href="contact.html">Contact Us</a><a href="login.html">Login</a></div>
+
+  <section class="page-hero">
+    <div class="hero-badge">✦ 22 Courses · 6 Languages</div>
+    <h1>All <span class="gradient-text">Courses</span></h1>
+    <p>From fundamentals to expert-level systems programming. Choose your path and start building.</p>
+  </section>
+
+  <section class="section">
+    <!-- Filters -->
+    <nav class="filters" aria-label="Filter courses by language">
+      <button class="pill active" data-filter="All">All</button>
+      <button class="pill" data-filter="C++">C++</button>
+      <button class="pill" data-filter="Python">Python</button>
+      <button class="pill" data-filter="JavaScript">JavaScript</button>
+      <button class="pill" data-filter="Rust">Rust</button>
+      <button class="pill" data-filter="Java">Java</button>
+      <button class="pill" data-filter="SQL">SQL</button>
+    </nav>
+
+    <!-- Dynamic course sections rendered by JS -->
+    <div id="courses-container"></div>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true"><div class="modal"></div></div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><div class="logo-text">Code<span>Academy</span> Pro</div></a><p>Professional programming education, structured for real-world success.</p></div>
+      <div class="footer-col"><h4>Pages</h4><a href="../index.html">Home</a><a href="about.html">About Us</a><a href="courses.html">Courses</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h4>Courses</h4><a href="#cpp">C++</a><a href="#python">Python</a><a href="#javascript">JavaScript</a><a href="#rust">Rust</a></div>
+      <div class="footer-col"><h4>More</h4><a href="#java">Java</a><a href="#sql">SQL</a><a href="login.html">Login</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 CodeAcademy Pro</span><span>Built with ♥ for developers</span></div>
+  </footer>
+
+  <script src="../js/courses.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

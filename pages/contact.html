@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Contact Us — CodeAcademy Pro</title>
+  <meta name="description" content="Get in touch with the CodeAcademy Pro team."/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>"/>
+</head>
+<body>
+  <header class="nav"><div class="nav-inner">
+    <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><div class="logo-text">Code<span>Academy</span> Pro</div></a>
+    <nav class="nav-links"><a href="../index.html">Home</a><a href="about.html">About Us</a><a href="courses.html">Courses</a><a href="contact.html" class="active">Contact Us</a><a href="login.html" class="nav-login">Login</a></nav>
+    <button class="hamburger" onclick="document.getElementById('mob').classList.toggle('open')" aria-label="Menu">☰</button>
+  </div></header>
+  <div class="mobile-menu" id="mob"><a href="../index.html">Home</a><a href="about.html">About Us</a><a href="courses.html">Courses</a><a href="contact.html">Contact Us</a><a href="login.html">Login</a></div>
+
+  <section class="page-hero">
+    <div class="hero-badge">✦ We'd Love to Hear From You</div>
+    <h1>Contact <span class="gradient-text">Us</span></h1>
+    <p>Have a question, partnership inquiry, or feedback? Reach out and we'll get back to you within 24 hours.</p>
+  </section>
+
+  <section class="section">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item"><div class="ci-icon">📧</div><div><h4>Email Us</h4><p>support@codeacademypro.com</p></div></div>
+        <div class="contact-item"><div class="ci-icon">💬</div><div><h4>Live Chat</h4><p>Available Mon–Fri, 9AM–6PM EST</p></div></div>
+        <div class="contact-item"><div class="ci-icon">📍</div><div><h4>Location</h4><p>San Francisco, CA · Remote-First Team</p></div></div>
+        <div class="contact-item"><div class="ci-icon">🐦</div><div><h4>Social</h4><p>@codeacademypro on Twitter, GitHub, Discord</p></div></div>
+      </div>
+      <form class="contact-form" onsubmit="event.preventDefault();this.innerHTML='<div style=\'text-align:center;padding:3rem\'><div style=\'font-size:2.5rem;margin-bottom:1rem\'>✅</div><h3>Message Sent!</h3><p style=\'color:var(--txt2);margin-top:.5rem\'>We\'ll get back to you within 24 hours.</p></div>'">
+        <div class="form-row">
+          <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" placeholder="John Doe" required/></div>
+          <div class="form-group"><label for="email">Email</label><input type="email" id="email" placeholder="john@example.com" required/></div>
+        </div>
+        <div class="form-group"><label for="subject">Subject</label>
+          <select id="subject"><option>General Inquiry</option><option>Course Question</option><option>Partnership</option><option>Bug Report</option><option>Other</option></select>
+        </div>
+        <div class="form-group"><label for="message">Message</label><textarea id="message" placeholder="Tell us what's on your mind..." required></textarea></div>
+        <button type="submit" class="btn btn-primary" style="align-self:flex-start">Send Message →</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><div class="logo-text">Code<span>Academy</span> Pro</div></a><p>Professional programming education, structured for real-world success.</p></div>
+      <div class="footer-col"><h4>Pages</h4><a href="../index.html">Home</a><a href="about.html">About Us</a><a href="courses.html">Courses</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h4>Courses</h4><a href="courses.html#cpp">C++</a><a href="courses.html#python">Python</a><a href="courses.html#javascript">JavaScript</a><a href="courses.html#rust">Rust</a></div>
+      <div class="footer-col"><h4>More</h4><a href="courses.html#java">Java</a><a href="courses.html#sql">SQL</a><a href="login.html">Login</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 CodeAcademy Pro</span><span>Built with ♥ for developers</span></div>
+  </footer>
+</body>
+</html>

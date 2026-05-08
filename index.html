@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>CodeAcademy Pro — Master Programming from Fundamentals to Expert</title>
+  <meta name="description" content="Professional programming courses in C++, Python, JavaScript, Rust, Java, and SQL."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>"/>
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><div class="logo-text">Code<span>Academy</span> Pro</div></a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="pages/about.html">About Us</a>
+        <a href="pages/courses.html">Courses</a>
+        <a href="pages/contact.html">Contact Us</a>
+        <a href="pages/login.html" class="nav-login">Login</a>
+      </nav>
+      <button class="hamburger" onclick="document.getElementById('mob').classList.toggle('open')" aria-label="Menu">☰</button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mob">
+    <a href="index.html">Home</a><a href="pages/about.html">About Us</a><a href="pages/courses.html">Courses</a><a href="pages/contact.html">Contact Us</a><a href="pages/login.html">Login</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">✦ Professional Programming Courses</div>
+    <h1>Master Code,<br/><span class="gradient-text">Build the Future.</span></h1>
+    <p>Structured, project-driven courses across 6 languages and 22 levels. From your first line of code to production-grade systems.</p>
+    <div class="hero-btns">
+      <a href="pages/courses.html" class="btn btn-primary">Browse Courses →</a>
+      <a href="pages/about.html" class="btn btn-outline">Learn More</a>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-item"><div class="num">22</div><div class="label">Courses</div></div>
+    <div class="stat-item"><div class="num">780+</div><div class="label">Hours</div></div>
+    <div class="stat-item"><div class="num">6</div><div class="label">Languages</div></div>
+    <div class="stat-item"><div class="num">110+</div><div class="label">Projects</div></div>
+  </div>
+
+  <!-- FEATURED COURSES -->
+  <section class="section">
+    <div class="section-header">
+      <h2>Featured Courses</h2>
+      <p>Start with our most popular tracks, hand-picked for every skill level.</p>
+    </div>
+    <div class="courses-grid" id="featured-grid"></div>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a href="pages/courses.html" class="btn btn-outline">View All Courses →</a>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section">
+    <div class="section-header">
+      <h2>Why CodeAcademy Pro?</h2>
+      <p>Everything you need to go from beginner to production-ready developer.</p>
+    </div>
+    <div class="features">
+      <div class="feature"><div class="f-icon">📐</div><h3>Structured Curriculum</h3><p>Each course follows a logical progression from fundamentals to advanced topics with clear learning outcomes.</p></div>
+      <div class="feature"><div class="f-icon">🛠️</div><h3>Project-Based Learning</h3><p>Build real-world projects in every course. No toy examples — you'll create apps, APIs, and libraries.</p></div>
+      <div class="feature"><div class="f-icon">🧩</div><h3>Multi-Level Paths</h3><p>Progress through up to 5 levels per language, each building on the last to deepen your expertise.</p></div>
+      <div class="feature"><div class="f-icon">⚡</div><h3>Modern & Up-to-Date</h3><p>Covering C++20, Python 3.12, React 19, Next.js 15, and more. Always current with industry standards.</p></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><div class="logo-text">Code<span>Academy</span> Pro</div></a>
+        <p>Professional programming education, structured for real-world success.</p>
+      </div>
+      <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="pages/about.html">About Us</a><a href="pages/courses.html">Courses</a><a href="pages/contact.html">Contact</a></div>
+      <div class="footer-col"><h4>Courses</h4><a href="pages/courses.html#cpp">C++</a><a href="pages/courses.html#python">Python</a><a href="pages/courses.html#javascript">JavaScript</a><a href="pages/courses.html#rust">Rust</a></div>
+      <div class="footer-col"><h4>More</h4><a href="pages/courses.html#java">Java</a><a href="pages/courses.html#sql">SQL</a><a href="pages/login.html">Login</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 CodeAcademy Pro</span><span>Built with ♥ for developers</span></div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="js/courses.js"></script>
+  <script>
+    // Show 6 featured courses on homepage
+    const grid = document.getElementById('featured-grid');
+    const featured = [COURSES[0], COURSES[5], COURSES[10], COURSES[14], COURSES[17], COURSES[20]];
+    const icons = {
+      clock: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>`,
+      folder: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>`,
+      arrow: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`
+    };
+    const ll = ["","Beginner","Intermediate","Advanced","Expert","Master"];
+    featured.forEach((c,i) => {
+      if(!c) return;
+      const d = document.createElement('div');
+      d.className = 'card'; d.tabIndex = 0; d.style.setProperty('--card-color', c.color); d.style.animationDelay = `${i*.06}s`;
+      d.innerHTML = `<div class="card-header"><div class="card-icon" style="background:${c.color}">${c.tag}</div><span class="card-level" style="background:${c.bg};color:${c.color}">Lvl ${c.level} · ${ll[c.level]}</span></div><h3 class="card-title">${c.title}</h3><p class="card-desc">${c.desc}</p><div class="card-topics">${c.topics.map(t=>`<span class="topic-tag">${t}</span>`).join('')}</div><div class="card-footer"><div class="card-meta"><span class="meta-item">${icons.clock} ${c.hours}h</span><span class="meta-item">${icons.folder} ${c.projects} projects</span></div><span class="card-cta">View ${icons.arrow}</span></div>`;
+      d.onclick = () => window.location.href = `pages/courses.html#${c.lang.toLowerCase().replace('++','pp')}`;
+      grid.appendChild(d);
+    });
+  </script>
+</body>
+</html>

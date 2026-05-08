@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Login — CodeAcademy Pro</title>
+  <meta name="description" content="Sign in to your CodeAcademy Pro account."/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>"/>
+</head>
+<body>
+  <header class="nav"><div class="nav-inner">
+    <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><div class="logo-text">Code<span>Academy</span> Pro</div></a>
+    <nav class="nav-links"><a href="../index.html">Home</a><a href="about.html">About Us</a><a href="courses.html">Courses</a><a href="contact.html">Contact Us</a><a href="login.html" class="nav-login active">Login</a></nav>
+    <button class="hamburger" onclick="document.getElementById('mob').classList.toggle('open')" aria-label="Menu">☰</button>
+  </div></header>
+  <div class="mobile-menu" id="mob"><a href="../index.html">Home</a><a href="about.html">About Us</a><a href="courses.html">Courses</a><a href="contact.html">Contact Us</a><a href="login.html">Login</a></div>
+
+  <div class="login-wrapper">
+    <div class="login-card" id="auth-card">
+      <h2 id="auth-title">Welcome Back</h2>
+      <p class="sub" id="auth-sub">Sign in to continue your learning journey</p>
+
+      <form id="auth-form" onsubmit="event.preventDefault();">
+        <div class="form-group" id="name-field" style="display:none;margin-bottom:1rem">
+          <label for="signup-name">Full Name</label>
+          <input type="text" id="signup-name" placeholder="John Doe"/>
+        </div>
+        <div class="form-group" style="margin-bottom:1rem">
+          <label for="auth-email">Email Address</label>
+          <input type="email" id="auth-email" placeholder="you@example.com" required/>
+        </div>
+        <div class="form-group" style="margin-bottom:1.5rem">
+          <label for="auth-pass">Password</label>
+          <input type="password" id="auth-pass" placeholder="••••••••" required/>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center" id="auth-btn">Sign In →</button>
+      </form>
+
+      <div class="divider">or continue with</div>
+      <div class="social-btns">
+        <button class="social-btn" type="button">🔗 GitHub</button>
+        <button class="social-btn" type="button">🌐 Google</button>
+      </div>
+
+      <div class="login-footer" id="auth-footer">
+        Don't have an account? <a href="#" id="toggle-auth">Sign Up</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom"><span>© 2026 CodeAcademy Pro</span><span>Built with ♥ for developers</span></div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('toggle-auth');
+    const title = document.getElementById('auth-title');
+    const sub = document.getElementById('auth-sub');
+    const btn = document.getElementById('auth-btn');
+    const footer = document.getElementById('auth-footer');
+    const nameField = document.getElementById('name-field');
+    let isLogin = true;
+    toggle.addEventListener('click', e => {
+      e.preventDefault();
+      isLogin = !isLogin;
+      if (isLogin) {
+        title.textContent = 'Welcome Back';
+        sub.textContent = 'Sign in to continue your learning journey';
+        btn.textContent = 'Sign In →';
+        footer.innerHTML = "Don't have an account? <a href='#' id='toggle-auth'>Sign Up</a>";
+        nameField.style.display = 'none';
+      } else {
+        title.textContent = 'Create Account';
+        sub.textContent = 'Start your programming journey today';
+        btn.textContent = 'Create Account →';
+        footer.innerHTML = "Already have an account? <a href='#' id='toggle-auth'>Sign In</a>";
+        nameField.style.display = 'block';
+      }
+      document.getElementById('toggle-auth').addEventListener('click', arguments.callee.bind(null, e));
+      // Re-bind
+      document.getElementById('toggle-auth').onclick = function(ev) {
+        ev.preventDefault();
+        isLogin = !isLogin;
+        if (isLogin) {
+          title.textContent = 'Welcome Back'; sub.textContent = 'Sign in to continue your learning journey';
+          btn.textContent = 'Sign In →'; nameField.style.display = 'none';
+          footer.innerHTML = "Don't have an account? <a href='#' id='toggle-auth'>Sign Up</a>";
+        } else {
+          title.textContent = 'Create Account'; sub.textContent = 'Start your programming journey today';
+          btn.textContent = 'Create Account →'; nameField.style.display = 'block';
+          footer.innerHTML = "Already have an account? <a href='#' id='toggle-auth'>Sign In</a>";
+        }
+        document.getElementById('toggle-auth').onclick = arguments.callee;
+      };
+    });
+  </script>
+</body>
+</html>
